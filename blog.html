@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Producto | EcoBeauty</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"> <img src="/images/logo.png" alt="EcoBeauty Logo" style="height: 40px;"></a>
+        </div>
+
+      <nav class="header-actions">
+            <button class="btn" id="open-auth">Iniciar sesión</button>
+            <button class="btn btn-primary">Registrarse</button>
+            <a href="car.html"><img src="images/car.png" alt="Carrito de compras" class="cart"></a>
+            <span class="cart-count">0</span>
+            <a href="userProfile.html"><img src="images/user.png" alt="Perfil de usuario" class="user"></a>
+        </nav>
+    </header>
+
+    <main>
+        <section style="text-align: center; padding: 40px 20px 20px 20px;">
+            <h1 style="font-size: 2.5rem; font-weight: bold;">Blog e información de los productos</h1>
+        </section>
+
+        <section class="slider-container">
+            <button class="arrow left">&#8592;</button>
+
+            <div class="slider">
+                <a href="production.html" class="card">
+                    <div class="image-box">
+                        <img src="images/bruma.png" alt="Rocío vital">
+                    </div>
+                    <p><strong>Rocío vital</strong></p>
+                </a>
+
+                <a href="production.html" class="card">
+                    <div class="image-box">
+                        <img src="images/rubor.png" alt="Flor de vida">
+                    </div>
+                    <p><strong>Flor de vida</strong></p>
+                </a>
+
+                <a href="production.html" class="card">
+                    <div class="image-box">
+                        <img src="images/labiales.png" alt="Besos Sustentables">
+                    </div>
+                    <p><strong>Luz de luna</strong></p>
+                </a>
+
+                <a href="production.html" class="card">
+                    <div class="image-box">
+                        <img src="images/sérum.png" alt="Luz de luna">
+                    </div>
+                    <p><strong>Luz de luna</strong></p>
+                </a>
+
+                <a href="production.html" class="card">
+                    <div class="image-box">
+                        <img src="images/paletadecolores.png" alt="Raíces rosadas">
+                    </div>
+                    <p><strong>Raíces rosadas</strong></p>
+                </a>
+
+                <a href="production.html" class="card">
+                    <div class="image-box">
+                        <img src="images/base.png" alt="Base de estrellas">
+                    </div>
+                    <p><strong>Base de estrellas</strong></p>
+                </a>
+            </div>
+
+            <button class="arrow right">&#8594;</button>
+        </section>
+    </main>
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" id="close-auth">&times;</span>
+            <h2 id="modal-title">Iniciar sesión</h2>
+            <form>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Entrar</button>
+            </form>
+            <div style="text-align:center; margin: 10px 0;">o</div>
+            <button class="btn google-btn" type="button" style="width:100%;">
+                <i class="fa-brands fa-google"></i> Iniciar sesión con Google
+            </button>
+            <p id="toggle-auth" style="text-align:center; cursor:pointer; color:#007bff; margin-top:10px;">
+                ¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <div class="footer-mail">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:contacto@ecobeauty.com">contacto@ecobeauty.com</a>
+                    </div>
+                    <div class="footer-phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+573001234567">+57 300 123 4567</a>
+                    </div>
+                    <div class="footer-chat">
+                        <i class="fa-regular fa-comments"></i>
+                        <a href="#">Chatea con nosotros</a>
+                    </div>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4>Sobre Nosotros</h4>
+                        <ul>
+                            <li><a href="#">Nuestra historia</a></li>
+                            <li><a href="#">Misión y visión</a></li>
+                            <li><a href="#">Valores</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Envíos</a></li>
+                            <li><a href="#">Devoluciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social-vertical">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 EcoBeauty. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+      <script>
+        const authModal = document.getElementById('auth-modal');
+        const closeAuth = document.getElementById('close-auth');
+        const loginBtn = document.querySelector('.header-actions .btn');
+        const registerBtn = document.querySelector('.header-actions .btn-primary');
+        const modalTitle = document.getElementById('modal-title');
+        const toggleAuth = document.getElementById('toggle-auth');
+
+        loginBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modalTitle.textContent = 'Iniciar sesión';
+            toggleAuth.innerHTML = '¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>';
+            authModal.classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('switch-to-register').onclick = showRegister;
+            }, 10);
+        });
+
+        registerBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modalTitle.textContent = 'Registrarse';
+            toggleAuth.innerHTML = '¿Ya tienes cuenta? <span id="switch-to-login">Inicia sesión</span>';
+            authModal.classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('switch-to-login').onclick = showLogin;
+            }, 10);
+        });
+
+        closeAuth.addEventListener('click', function () {
+            authModal.classList.add('hidden');
+        });
+
+        function showRegister() {
+            modalTitle.textContent = 'Registrarse';
+            toggleAuth.innerHTML = '¿Ya tienes cuenta? <span id="switch-to-login">Inicia sesión</span>';
+            document.getElementById('switch-to-login').onclick = showLogin;
+        }
+        function showLogin() {
+            modalTitle.textContent = 'Iniciar sesión';
+            toggleAuth.innerHTML = '¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>';
+            document.getElementById('switch-to-register').onclick = showRegister;
+        }
+
+
+        authModal.addEventListener('click', function (e) {
+            if (e.target === authModal) authModal.classList.add('hidden');
+        });
+    </script>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const leftArrow = document.querySelector('.arrow.left');
+        const rightArrow = document.querySelector('.arrow.right');
+
+        leftArrow.addEventListener('click', () => {
+            slider.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+
+        rightArrow.addEventListener('click', () => {
+            slider.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+    </script>
+
+    <script>
+        (function () {
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.documentElement.style.fontSize = savedFontSize + '%';
+            }
+            if (localStorage.getItem('highContrast') === 'true') {
+                document.documentElement.classList.add('high-contrast');
+            }
+        })();
+    </script>
+
+    <script>
+        (function () {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                let total = cart.reduce((sum, item) => sum + item.qty, 0);
+                cartCount.textContent = total;
+                cartCount.style.display = total > 0 ? 'inline-block' : 'none';
+            }
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Novedades | EcoBeauty</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"> <img src="/images/logo.png" alt="EcoBeauty Logo" style="height: 40px;"></a>
+        </div>
+        <nav class="header-actions">
+            <button class="btn" id="open-auth">Iniciar sesión</button>
+            <button class="btn btn-primary">Registrarse</button>
+            <a href="car.html"><img src="images/car.png" alt="Carrito de compras" class="cart"></a>
+            <span class="cart-count">0</span>
+            <a href="userProfile.html"><img src="images/user.png" alt="Perfil de usuario" class="user"></a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-container">
+        <a href="index.html" class="breadcrumb-home" title="Inicio">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <nav class="breadcrumb">
+            <a href="index.html">Inicio</a> &gt;
+            <a href="news.html">Novedades</a>
+        </nav>
+    </div>
+
+    <main class="news-main">
+        <section class="news-header">
+            <h1>Novedades EcoBeauty</h1>
+            <p>Descubre los lanzamientos, eventos y noticias más recientes de nuestra comunidad sostenible.</p>
+        </section>
+
+        <section class="news-list">
+            <article class="news-card">
+                <div class="news-img">
+                    <img src="images/shampoo.png" alt="Shampoo sólido ecológico" class="news-img-real">
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">¡Nuevo producto! Shampoo sólido ecológico</h2>
+                    <div class="news-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 30 mayo 2025</span>
+                        <span><i class="fa-regular fa-user"></i> Equipo EcoBeauty</span>
+                    </div>
+                    <p>
+                        Presentamos nuestro shampoo sólido, libre de plásticos y con ingredientes 100% naturales. ¡Ideal
+                        para cuidar tu cabello y el planeta!
+                    </p>
+                    <a href="blogNews.html" class="btn btn-primary news-btn">
+                        Ver más <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-img">
+                    <img src="images/feria.png" alt="Feria verde" class="news-img-real">
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">EcoBeauty en la Feria Verde 2025</h2>
+                    <div class="news-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 22 mayo 2025</span>
+                        <span><i class="fa-regular fa-user"></i> Comunicaciones</span>
+                    </div>
+                    <p>
+                        Participamos en la Feria Verde con talleres, charlas y muestras de nuestros productos
+                        ecológicos. ¡Gracias por visitarnos!
+                    </p>
+                    <a href="blogNews.html" class="btn btn-primary news-btn">Ver más <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-img">
+                    <img src="images/fundacion.png" alt="Fundación Planeta Vivo" class="news-img-real">
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">Nueva alianza con Fundación Planeta Vivo</h2>
+                    <div class="news-meta">
+                        <span><i class="fa-regular fa-calendar"></i> 10 mayo 2025</span>
+                        <span><i class="fa-regular fa-user"></i> Equipo EcoBeauty</span>
+                    </div>
+                    <p>
+                        Nos unimos a Fundación Planeta Vivo para impulsar proyectos de educación ambiental y reciclaje
+                        en comunidades locales.
+                    </p>
+                    <a href="blogNews.html" class="btn btn-primary news-btn">Ver más <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" id="close-auth">&times;</span>
+            <h2 id="modal-title">Iniciar sesión</h2>
+            <form>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Entrar</button>
+            </form>
+            <div style="text-align:center; margin: 10px 0;">o</div>
+            <button class="btn google-btn" type="button" style="width:100%;">
+                <i class="fa-brands fa-google"></i> Iniciar sesión con Google
+            </button>
+            <p id="toggle-auth" style="text-align:center; cursor:pointer; color:#007bff; margin-top:10px;">
+                ¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <div class="footer-mail">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:contacto@ecobeauty.com">contacto@ecobeauty.com</a>
+                    </div>
+                    <div class="footer-phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+573001234567">+57 300 123 4567</a>
+                    </div>
+                    <div class="footer-chat">
+                        <i class="fa-regular fa-comments"></i>
+                        <a href="#">Chatea con nosotros</a>
+                    </div>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4>Sobre Nosotros</h4>
+                        <ul>
+                            <li><a href="#">Nuestra historia</a></li>
+                            <li><a href="#">Misión y visión</a></li>
+                            <li><a href="#">Valores</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Envíos</a></li>
+                            <li><a href="#">Devoluciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social-vertical">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 EcoBeauty. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+    <script>
+        const authModal = document.getElementById('auth-modal');
+        const closeAuth = document.getElementById('close-auth');
+        const loginBtn = document.querySelector('.header-actions .btn');
+        const registerBtn = document.querySelector('.header-actions .btn-primary');
+        const modalTitle = document.getElementById('modal-title');
+        const toggleAuth = document.getElementById('toggle-auth');
+
+        loginBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modalTitle.textContent = 'Iniciar sesión';
+            toggleAuth.innerHTML = '¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>';
+            authModal.classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('switch-to-register').onclick = showRegister;
+            }, 10);
+        });
+
+        registerBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modalTitle.textContent = 'Registrarse';
+            toggleAuth.innerHTML = '¿Ya tienes cuenta? <span id="switch-to-login">Inicia sesión</span>';
+            authModal.classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('switch-to-login').onclick = showLogin;
+            }, 10);
+        });
+
+        closeAuth.addEventListener('click', function () {
+            authModal.classList.add('hidden');
+        });
+
+        function showRegister() {
+            modalTitle.textContent = 'Registrarse';
+            toggleAuth.innerHTML = '¿Ya tienes cuenta? <span id="switch-to-login">Inicia sesión</span>';
+            document.getElementById('switch-to-login').onclick = showLogin;
+        }
+        function showLogin() {
+            modalTitle.textContent = 'Iniciar sesión';
+            toggleAuth.innerHTML = '¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>';
+            document.getElementById('switch-to-register').onclick = showRegister;
+        }
+
+
+        authModal.addEventListener('click', function (e) {
+            if (e.target === authModal) authModal.classList.add('hidden');
+        });
+    </script>
+    <script>
+        (function () {
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.documentElement.style.fontSize = savedFontSize + '%';
+            }
+            if (localStorage.getItem('highContrast') === 'true') {
+                document.documentElement.classList.add('high-contrast');
+            }
+        })();
+    </script>
+    <script>
+        (function () {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                let total = cart.reduce((sum, item) => sum + item.qty, 0);
+                cartCount.textContent = total;
+                cartCount.style.display = total > 0 ? 'inline-block' : 'none';
+            }
+        })();
+    </script>
+</body>
+
+</html>

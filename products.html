@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Productos | EcoBeauty</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html"> <img src="/images/logo.png" alt="EcoBeauty Logo" style="height: 40px;"></a>
+        </div>
+
+        <form class="search-container" role="search">
+            <input type="text" class="search" placeholder="Buscar productos..." autocomplete="off" id="searchInput">
+            <ul id="suggestions" class="suggestions-list"></ul>
+        </form>
+
+        <nav class="header-actions">
+            <button class="btn" id="open-auth">Iniciar sesión</button>
+            <button class="btn btn-primary">Registrarse</button>
+            <a href="car.html"><img src="images/car.png" alt="Carrito de compras" class="cart"></a>
+            <span class="cart-count">0</span>
+            <a href="userProfile.html"><img src="images/user.png" alt="Perfil de usuario" class="user"></a>
+        </nav>
+
+    </header>
+
+    <div class="breadcrumb-container">
+        <a href="index.html" class="breadcrumb-home" title="Inicio">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <nav class="breadcrumb">
+            &gt; <a href="products.html">Productos</a>
+
+        </nav>
+    </div>
+
+    <main class="products-main">
+
+        <aside class="filters visual-filters">
+            <div class="filter-section" data-filter>
+                <button class="filter-toggle" type="button">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>Tipo de piel</span>
+                    <i class="fa fa-chevron-down chevron"></i>
+                </button>
+                <div class="filter-content">
+                    <label><input type="checkbox" name="piel" checked> Normal</label>
+                    <label><input type="checkbox" name="piel"> Seca</label>
+                    <label><input type="checkbox" name="piel"> Grasa</label>
+                    <label><input type="checkbox" name="piel"> Mixta</label>
+                </div>
+            </div>
+            <hr>
+            <div class="filter-section" data-filter>
+                <button class="filter-toggle" type="button">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>Ingredientes</span>
+                    <i class="fa fa-chevron-down chevron"></i>
+                </button>
+                <div class="filter-content">
+                    <label><input type="checkbox" name="ingredientes" checked> Orgánicos</label>
+                    <label><input type="checkbox" name="ingredientes"> Veganos</label>
+                    <label><input type="checkbox" name="ingredientes"> Sin parabenos</label>
+                </div>
+            </div>
+            <hr>
+            <div class="filter-section" data-filter>
+                <button class="filter-toggle" type="button">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>Certificaciones</span>
+                    <i class="fa fa-chevron-down chevron"></i>
+                </button>
+                <div class="filter-content">
+                    <label><input type="checkbox" name="certificaciones" checked> Cruelty Free</label>
+                    <label><input type="checkbox" name="certificaciones"> EcoCert</label>
+                </div>
+            </div>
+            <hr>
+            <div class="filter-section" data-filter>
+                <button class="filter-toggle" type="button">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <span>Rango de precio</span>
+                    <i class="fa fa-chevron-down chevron"></i>
+                </button>
+                <div class="filter-content price-slider-group">
+                    <div class="slider-labels">
+                        <span id="min-price">$15.000</span>
+                        <input type="range" min="15000" max="100000" value="15000" id="price-range">
+                        <span id="max-price">$100.000</span>
+                    </div>
+                    <div class="slider-value">
+                        <span>Precio seleccionado: $<span id="selected-price">15.000</span></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="filter-section" data-filter>
+                <button class="filter-toggle" type="button">
+                    <i class="fa-solid fa-tags"></i>
+                    <span>Marcas</span>
+                    <i class="fa fa-chevron-down chevron"></i>
+                </button>
+                <div class="filter-content">
+                    <label><input type="checkbox" name="marca" checked> Marca 1</label>
+                    <label><input type="checkbox" name="marca"> Marca 2</label>
+                    <label><input type="checkbox" name="marca"> Marca 3</label>
+                </div>
+            </div>
+        </aside>
+
+        <section class="products-list-section">
+            <div class="products-list-two">
+                <a href="product.html" class="product-link" data-id="1">
+                    <div class="product-card-two">
+                        <button class="fav">♡</button>
+                        <img src="images/bruma.png" alt="Rocío Vital" class="product-img">
+                        <div class="product-info">
+                            <span class="product-name">Rocío Vital</span>
+                            <span class="product-price-two">$34.900</span>
+                            <div class="product-rating-two">★★★★★</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="product.html" class="product-link" data-id="2">
+                    <div class="product-card-two">
+                        <button class="fav">♡</button>
+                        <img src="images/rubor.png" alt="Flor de Vida" class="product-img">
+                        <div class="product-info">
+                            <span class="product-name">Flor de Vida</span>
+                            <span class="product-price-two">$29.900</span>
+                            <div class="product-rating-two">★★★★☆</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="product.html" class="product-link" data-id="3">
+                    <div class="product-card-two">
+                        <button class="fav">♡</button>
+                        <img src="images/labiales.png" alt="Besos Sustentables" class="product-img">
+                        <div class="product-info">
+                            <span class="product-name">Besos Sustentables</span>
+                            <span class="product-price-two">$19.900</span>
+                            <div class="product-rating-two">★★★★★</div>
+                        </div>
+                    </div>
+
+                </a>
+
+                <a href="product.html" class="product-link" data-id="4">
+                    <div class="product-card-two">
+                        <button class="fav">♡</button>
+                        <img src="images/paleta.png" alt="Brisas de tierra" class="product-img">
+                        <div class="product-info">
+                            <span class="product-name">Brisas de tierra</span>
+                            <span class="product-price-two">$54.900</span>
+                            <div class="product-rating-two">★★★★★</div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="product.html" class="product-link" data-id="5">
+                    <div class="product-card-two">
+                        <button class="fav">♡</button>
+                        <img src="images/serumtwo.png" alt="Luz de luna" class="product-img">
+                        <div class="product-info">
+                            <span class="product-name">Luz de luna</span>
+                            <span class="product-price-two">$39.900</span>
+                            <div class="product-rating-two">★★★★☆</div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="product.html" class="product-link" data-id="6">
+                    <div class="product-card-two">
+                        <button class="fav">♡</button>
+                        <img src="images/crema.png" alt="Crema Facial" class="product-img">
+                        <div class="product-info">
+                            <span class="product-name">Crema Facial</span>
+                            <span class="product-price-two">$44.900</span>
+                            <div class="product-rating-two">★★★★★</div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="product.html" class="product-link" data-id="7">
+                    <div class="product-card-two">
+                        <button class="fav">♡</button>
+                        <img src="images/jabon.png" alt="Jabón Artesanal" class="product-img">
+                        <div class="product-info">
+                            <span class="product-name">Jabón Artesanal</span>
+                            <span class="product-price-two">$15.900</span>
+                            <div class="product-rating-two">★★★★☆</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="product.html" class="product-link" data-id="8">
+                    <div class="product-card-two">
+                        <button class="fav">♡</button>
+                        <img src="images/mascarilla.png" alt="Mascarilla" class="product-img">
+                        <div class="product-info">
+                            <span class="product-name">Mascarilla</span>
+                            <span class="product-price-two">$24.900</span>
+                            <div class="product-rating-two">★★★★★</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <br>
+            <div class="pagination">
+                <span class="page active">1</span>
+                <span class="page">2</span>
+                <span class="page">3</span>
+                <span class="page">...</span>
+                <span class="page">67</span>
+                <span class="page">68</span>
+            </div>
+        </section>
+    </main>
+
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" id="close-auth">&times;</span>
+            <h2 id="modal-title">Iniciar sesión</h2>
+            <form>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Entrar</button>
+            </form>
+            <div style="text-align:center; margin: 10px 0;">o</div>
+            <button class="btn google-btn" type="button" style="width:100%;">
+                <i class="fa-brands fa-google"></i> Iniciar sesión con Google
+            </button>
+            <p id="toggle-auth" style="text-align:center; cursor:pointer; color:#007bff; margin-top:10px;">
+                ¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <div class="footer-mail">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:contacto@ecobeauty.com">contacto@ecobeauty.com</a>
+                    </div>
+                    <div class="footer-phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+573001234567">+57 300 123 4567</a>
+                    </div>
+                    <div class="footer-chat">
+                        <i class="fa-regular fa-comments"></i>
+                        <a href="#">Chatea con nosotros</a>
+                    </div>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4>Sobre Nosotros</h4>
+                        <ul>
+                            <li><a href="#">Nuestra historia</a></li>
+                            <li><a href="#">Misión y visión</a></li>
+                            <li><a href="#">Valores</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Envíos</a></li>
+                            <li><a href="#">Devoluciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social-vertical">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 EcoBeauty. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    document.querySelectorAll('.fav').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+
+    document.querySelectorAll('.fav').forEach((btn, idx) => {
+        const favKey = `fav-product-${idx}`;
+        if (localStorage.getItem(favKey) === 'true') {
+            btn.textContent = '❤️';
+        }
+
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            if (btn.textContent === '♡') {
+                btn.textContent = '❤️';
+                localStorage.setItem(favKey, 'true');
+            } else {
+                btn.textContent = '♡';
+                localStorage.setItem(favKey, 'false');
+            }
+        });
+    });
+
+</script>
+<script>
+    const productos = [
+        "Rocío Vital",
+        "Flor de Vida",
+        "Besos Sustentables",
+        "Bruma Hidratante",
+        "Rubor Orgánico",
+        "Luz de Luna",
+        "Brisa de Tierra",
+        "Base Luminuos",
+        "Crema Facial",
+        "Jabón Artesanal",
+        "Mascarilla",
+    ];
+
+    const searchInput = document.getElementById('searchInput');
+    const suggestionsList = document.getElementById('suggestions');
+
+    searchInput.addEventListener('input', function () {
+        const value = this.value.toLowerCase();
+        suggestionsList.innerHTML = '';
+        if (value) {
+            const filtered = productos.filter(p => p.toLowerCase().includes(value));
+            if (filtered.length) {
+                filtered.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    li.style.padding = '8px';
+                    li.style.cursor = 'pointer';
+                    li.addEventListener('mousedown', function () {
+                        searchInput.value = item;
+                        suggestionsList.style.display = 'none';
+                        window.location.href = 'products.html';
+                    });
+                    suggestionsList.appendChild(li);
+                });
+                suggestionsList.style.display = 'block';
+            } else {
+                suggestionsList.style.display = 'none';
+            }
+        } else {
+            suggestionsList.style.display = 'none';
+        }
+    });
+
+    searchInput.addEventListener('blur', function () {
+        setTimeout(() => suggestionsList.style.display = 'none', 100);
+    });
+</script>
+<script>
+    const authModal = document.getElementById('auth-modal');
+    const closeAuth = document.getElementById('close-auth');
+    const loginBtn = document.querySelector('.header-actions .btn');
+    const registerBtn = document.querySelector('.header-actions .btn-primary');
+    const modalTitle = document.getElementById('modal-title');
+    const toggleAuth = document.getElementById('toggle-auth');
+
+    loginBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        modalTitle.textContent = 'Iniciar sesión';
+        toggleAuth.innerHTML = '¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>';
+        authModal.classList.remove('hidden');
+        setTimeout(() => {
+            document.getElementById('switch-to-register').onclick = showRegister;
+        }, 10);
+    });
+
+    registerBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        modalTitle.textContent = 'Registrarse';
+        toggleAuth.innerHTML = '¿Ya tienes cuenta? <span id="switch-to-login">Inicia sesión</span>';
+        authModal.classList.remove('hidden');
+        setTimeout(() => {
+            document.getElementById('switch-to-login').onclick = showLogin;
+        }, 10);
+    });
+
+    closeAuth.addEventListener('click', function () {
+        authModal.classList.add('hidden');
+    });
+
+    function showRegister() {
+        modalTitle.textContent = 'Registrarse';
+        toggleAuth.innerHTML = '¿Ya tienes cuenta? <span id="switch-to-login">Inicia sesión</span>';
+        document.getElementById('switch-to-login').onclick = showLogin;
+    }
+    function showLogin() {
+        modalTitle.textContent = 'Iniciar sesión';
+        toggleAuth.innerHTML = '¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>';
+        document.getElementById('switch-to-register').onclick = showRegister;
+    }
+
+
+    authModal.addEventListener('click', function (e) {
+        if (e.target === authModal) authModal.classList.add('hidden');
+    });
+</script>
+<script>
+    document.querySelectorAll('.filter-toggle').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const section = btn.closest('.filter-section');
+            section.classList.toggle('collapsed');
+            const chevron = btn.querySelector('.chevron');
+            if (section.classList.contains('collapsed')) {
+                chevron.style.transform = 'rotate(-90deg)';
+            } else {
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+
+    const priceRange = document.getElementById('price-range');
+    const selectedPrice = document.getElementById('selected-price');
+    if (priceRange && selectedPrice) {
+        priceRange.addEventListener('input', function () {
+            selectedPrice.textContent = priceRange.value;
+        });
+        selectedPrice.textContent = priceRange.value;
+    }
+
+    document.querySelectorAll('.filter-content input').forEach(input => {
+        input.addEventListener('change', function () {
+
+        });
+    });
+</script>
+<script>
+
+    (function () {
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            document.documentElement.style.fontSize = savedFontSize + '%';
+        }
+        if (localStorage.getItem('highContrast') === 'true') {
+            document.documentElement.classList.add('high-contrast');
+        }
+    })();
+</script>
+<script>
+    (function () {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartCount = document.querySelector('.cart-count');
+        if (cartCount) {
+            let total = cart.reduce((sum, item) => sum + item.qty, 0);
+            cartCount.textContent = total;
+            cartCount.style.display = total > 0 ? 'inline-block' : 'none';
+        }
+    })();
+</script>
+<script>
+    const productsDescription = [
+        {
+            id: 1,
+            name: "Rocío Vital",
+            price: "$34.900",
+            img: "images/bruma.png",
+            rating: "★★★★★",
+            desc: "Bruma facial con extractos naturales de aloe vera y pepino, ideal para refrescar y calmar la piel durante el día.",
+            ingredientes: "Agua, Aceite de coco, Aloe vera",
+            certificaciones: "Cruelty Free, EcoCert"
+        },
+        {
+            id: 2,
+            name: "Flor de Vida",
+            price: "$29.900",
+            img: "images/rubor.png",
+            rating: "★★★★☆",
+            desc: "Rubor orgánico en tonos naturales, enriquecido con aceite de jojoba para un acabado radiante y saludable.",
+            ingredientes: "Tierra de diatomeas, Aceite de jojoba, Colorantes naturales",
+            certificaciones: "Vegan, Cruelty Free"
+        },
+        {
+            id: 3,
+            name: "Besos Sustentables",
+            price: "$19.900",
+            img: "images/labiales.png",
+            rating: "★★★★★",
+            desc: "Labial hidratante con manteca de karité y aceite de ricino, disponible en varios tonos vibrantes.",
+            ingredientes: "Manteca de karité, Aceite de ricino, Cera de abejas",
+            certificaciones: "Cruelty Free, EcoCert"
+        },
+        {
+            id: 4,
+            name: "Brisas de tierra",
+            price: "$54.900",
+            img: "images/paleta.png",
+            rating: "★★★★★",
+            desc: "Paleta de sombras con pigmentos minerales y extractos botánicos, perfecta para looks naturales y sofisticados.",
+            ingredientes: "Pigmentos minerales, Extracto de té verde, Aceite de oliva",
+            certificaciones: "Vegan, Cruelty Free"
+        },
+        {
+            id: 5,
+            name: "Serum Luminuos",
+            price: "$39.900",
+            img: "images/serumtwo.png",
+            rating: "★★★★☆",
+            desc: "Serum facial con vitamina C y ácido hialurónico para una piel radiante.",
+            ingredientes: "Vitamina C, Ácido hialurónico, Agua",
+            certificaciones: "Vegan, EcoCert"
+        }
+        , {
+            id: 6,
+            name: "Crema Facial",
+            price: "$44.900",
+            img: "images/crema.png",
+            rating: "★★★★★",
+            desc: "Crema hidratante con extracto de rosa mosqueta, ideal para todo tipo de piel.",
+            ingredientes: "Extracto de rosa mosqueta, Manteca de karité, Aceite de oliva",
+            certificaciones: "Cruelty Free, EcoCert"
+        },
+        {
+            id: 7,
+            name: "Jabón Artesanal",
+            price: "$15.900",
+            img: "images/jabon.png",
+            rating: "★★★★☆",
+            desc: "Jabón artesanal con aceite de oliva y lavanda, perfecto para una limpieza suave.",
+            ingredientes: "Aceite de oliva, Lavanda, Glicerina",
+            certificaciones: "Vegan, Cruelty Free"
+        },
+        {
+            id: 8,
+            name: "Mascarilla Facial",
+            price: "$24.900",
+            img: "images/mascarilla.png",
+            rating: "★★★★★",
+            desc: "Mascarilla facial con arcilla verde y aceite de árbol de té para purificar la piel.",
+            ingredientes: "Arcilla verde, Aceite de árbol de té, Agua",
+            certificaciones: "Cruelty Free, EcoCert"
+        }
+
+
+    ];
+
+    document.querySelectorAll('.product-link').forEach(link => {
+        link.addEventListener('click', function () {
+            const id = parseInt(link.getAttribute('data-id'));
+            const prod = productsDescription.find(p => p.id === id);
+            if (prod) {
+                localStorage.setItem('selectedProduct', JSON.stringify(prod));
+            }
+        });
+    });
+</script>
+
+</html>

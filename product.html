@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Producto | EcoBeauty</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"> <img src="/images/logo.png" alt="EcoBeauty Logo" style="height: 40px;"></a>
+        </div>
+
+        <form class="search-container" role="search">
+            <input type="text" class="search" placeholder="Buscar productos..." autocomplete="off" id="searchInput">
+            <ul id="suggestions" class="suggestions-list"></ul>
+        </form>
+
+        <nav class="header-actions">
+            <button class="btn" id="open-auth">Iniciar sesión</button>
+            <button class="btn btn-primary">Registrarse</button>
+            <a href="car.html"><img src="images/car.png" alt="Carrito de compras" class="cart"></a>
+            <span class="cart-count">0</span>
+            <a href="userProfile.html"><img src="images/user.png" alt="Perfil de usuario" class="user"></a>
+        </nav>
+
+    </header>
+    <main class="product-main">
+        <div class="product-top">
+            <div class="product-image-container">
+                <img src="images/bruma.png" alt="Rocío Vital" class="product-img-zoom">
+                <button class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Rocío Vital</h1>
+                <div class="product-price-two">$34.900</div>
+                <div class="product-rating">★★★★★ <a href="reviews.html"><span>(12 reseñas)</span></a></div>
+                <p class="product-desc">
+                    Bruma facial con extractos naturales de aloe vera y pepino, ideal para refrescar y calmar la piel
+                    durante el día.<br>
+                    <strong>Ingredientes:</strong> Agua, Aceite de coco, Aloe vera.<br>
+                    <strong>Certificaciones:</strong> Cruelty Free, EcoCert.
+                </p>
+                <div class="product-actions">
+                    <button class="btn btn-primary add-to-cart" data-name="Rocío Vital" data-price="34900">
+                        Añadir al carrito
+                    </button>
+                    <button class="btn btn-wishlist"><i class="fa-regular fa-heart"></i> Lista de deseos</button>
+                </div>
+                <div class="product-share">
+                    <span>Compartir:</span>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <section class="product-reviews">
+            <h2>Últimas reseñas</h2>
+            <div class="reviews-list">
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-title">¡Me encantó!</div>
+                    <div class="review-body">El producto superó mis expectativas, lo volvería a comprar sin dudarlo.
+                    </div>
+                    <div class="review-footer">
+                        <img src="https://randomuser.me/api/portraits/women/1.jpg" class="review-avatar" alt="user">
+                        <span class="reviewer-name">Lucía Romero</span>
+                        <span class="review-date">12 de abril de 2024</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★☆</div>
+                    <div class="review-title">Muy bueno, aunque mejorable</div>
+                    <div class="review-body">El acabado es excelente, pero el envío tardó más de lo esperado.</div>
+                    <div class="review-footer">
+                        <img src="https://randomuser.me/api/portraits/men/2.jpg" class="review-avatar" alt="user">
+                        <span class="reviewer-name">Carlos Méndez</span>
+                        <span class="review-date">3 de septiembre de 2023</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-title">Perfecto para piel sensible</div>
+                    <div class="review-body">No me causó ninguna reacción y deja la piel increíble. Lo recomiendo mucho.
+                    </div>
+                    <div class="review-footer">
+                        <img src="https://randomuser.me/api/portraits/women/3.jpg" class="review-avatar" alt="user">
+                        <span class="reviewer-name">Valeria Soto</span>
+                        <span class="review-date">27 de enero de 2025</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★☆☆</div>
+                    <div class="review-title">Aceptable</div>
+                    <div class="review-body">Está bien para el precio, pero la presentación no fue la mejor.</div>
+                    <div class="review-footer">
+                        <img src="https://randomuser.me/api/portraits/men/4.jpg" class="review-avatar" alt="user">
+                        <span class="reviewer-name">Julián Torres</span>
+                        <span class="review-date">19 de junio de 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+     <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" id="close-auth">&times;</span>
+            <h2 id="modal-title">Iniciar sesión</h2>
+            <form>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Entrar</button>
+            </form>
+            <div style="text-align:center; margin: 10px 0;">o</div>
+            <button class="btn google-btn" type="button" style="width:100%;">
+                <i class="fa-brands fa-google"></i> Iniciar sesión con Google
+            </button>
+            <p id="toggle-auth" style="text-align:center; cursor:pointer; color:#007bff; margin-top:10px;">
+                ¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>
+            </p>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <div class="footer-mail">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:contacto@ecobeauty.com">contacto@ecobeauty.com</a>
+                    </div>
+                    <div class="footer-phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+573001234567">+57 300 123 4567</a>
+                    </div>
+                    <div class="footer-chat">
+                        <i class="fa-regular fa-comments"></i>
+                        <a href="#">Chatea con nosotros</a>
+                    </div>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4>Sobre Nosotros</h4>
+                        <ul>
+                            <li><a href="#">Nuestra historia</a></li>
+                            <li><a href="#">Misión y visión</a></li>
+                            <li><a href="#">Valores</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Envíos</a></li>
+                            <li><a href="#">Devoluciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social-vertical">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 EcoBeauty. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+        const authModal = document.getElementById('auth-modal');
+        const closeAuth = document.getElementById('close-auth');
+        const loginBtn = document.querySelector('.header-actions .btn');
+        const registerBtn = document.querySelector('.header-actions .btn-primary');
+        const modalTitle = document.getElementById('modal-title');
+        const toggleAuth = document.getElementById('toggle-auth');
+
+        loginBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modalTitle.textContent = 'Iniciar sesión';
+            toggleAuth.innerHTML = '¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>';
+            authModal.classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('switch-to-register').onclick = showRegister;
+            }, 10);
+        });
+
+        registerBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modalTitle.textContent = 'Registrarse';
+            toggleAuth.innerHTML = '¿Ya tienes cuenta? <span id="switch-to-login">Inicia sesión</span>';
+            authModal.classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('switch-to-login').onclick = showLogin;
+            }, 10);
+        });
+
+        closeAuth.addEventListener('click', function () {
+            authModal.classList.add('hidden');
+        });
+
+        function showRegister() {
+            modalTitle.textContent = 'Registrarse';
+            toggleAuth.innerHTML = '¿Ya tienes cuenta? <span id="switch-to-login">Inicia sesión</span>';
+            document.getElementById('switch-to-login').onclick = showLogin;
+        }
+        function showLogin() {
+            modalTitle.textContent = 'Iniciar sesión';
+            toggleAuth.innerHTML = '¿No tienes cuenta? <span id="switch-to-register">Regístrate</span>';
+            document.getElementById('switch-to-register').onclick = showRegister;
+        }
+
+
+        authModal.addEventListener('click', function (e) {
+            if (e.target === authModal) authModal.classList.add('hidden');
+        });
+    </script>
+    <script>
+        let fontSize = parseInt(localStorage.getItem('fontSize')) || 100;
+        document.documentElement.style.fontSize = fontSize + '%';
+
+        document.getElementById('increase-font').onclick = function () {
+            if (fontSize < 150) fontSize += 10;
+            document.documentElement.style.fontSize = fontSize + '%';
+            localStorage.setItem('fontSize', fontSize);
+        };
+        document.getElementById('decrease-font').onclick = function () {
+            if (fontSize > 80) fontSize -= 10;
+            document.documentElement.style.fontSize = fontSize + '%';
+            localStorage.setItem('fontSize', fontSize);
+        };
+        document.getElementById('toggle-contrast').onclick = function () {
+            const isHigh = document.documentElement.classList.toggle('high-contrast');
+            localStorage.setItem('highContrast', isHigh);
+        };
+        if (localStorage.getItem('highContrast') === 'true') {
+            document.documentElement.classList.add('high-contrast');
+        }
+    </script>
+<script>
+    const productos = [
+        "Rocío Vital",
+        "Flor de Vida",
+        "Besos Sustentables",
+        "Bruma Hidratante",
+        "Rubor Orgánico",
+        "Luz de Luna",
+        "Brisa de Tierra",
+        "Base Luminuos",
+        "Crema Facial",
+        "Jabón Artesanal",
+        "Mascarilla",
+    ];
+
+    const searchInput = document.getElementById('searchInput');
+    const suggestionsList = document.getElementById('suggestions');
+
+    searchInput.addEventListener('input', function () {
+        const value = this.value.toLowerCase();
+        suggestionsList.innerHTML = '';
+        if (value) {
+            const filtered = productos.filter(p => p.toLowerCase().includes(value));
+            if (filtered.length) {
+                filtered.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    li.style.padding = '8px';
+                    li.style.cursor = 'pointer';
+                    li.addEventListener('mousedown', function () {
+                        searchInput.value = item;
+                        suggestionsList.style.display = 'none';
+                        window.location.href = 'products.html';
+                    });
+                    suggestionsList.appendChild(li);
+                });
+                suggestionsList.style.display = 'block';
+            } else {
+                suggestionsList.style.display = 'none';
+            }
+        } else {
+            suggestionsList.style.display = 'none';
+        }
+    });
+
+    searchInput.addEventListener('blur', function () {
+        setTimeout(() => suggestionsList.style.display = 'none', 100);
+    });
+</script>
+<script>
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const prod = JSON.parse(localStorage.getItem('selectedProduct'));
+            if (!prod) return;
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const idx = cart.findIndex(item => item.name === prod.name);
+            if (idx > -1) {
+                cart[idx].qty += 1;
+            } else {
+                cart.push({ ...prod, qty: 1 });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                let total = cart.reduce((sum, item) => sum + item.qty, 0);
+                cartCount.textContent = total;
+                cartCount.style.display = total > 0 ? 'inline-block' : 'none';
+            }
+            alert('Producto añadido al carrito');
+        });
+    });
+    (function () {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartCount = document.querySelector('.cart-count');
+        if (cartCount) {
+            let total = cart.reduce((sum, item) => sum + item.qty, 0);
+            cartCount.textContent = total;
+            cartCount.style.display = total > 0 ? 'inline-block' : 'none';
+        }
+    })();
+</script>
+<script>
+
+    (function () {
+
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            document.documentElement.style.fontSize = savedFontSize + '%';
+        }
+        if (localStorage.getItem('highContrast') === 'true') {
+            document.documentElement.classList.add('high-contrast');
+        }
+    })();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const prod = JSON.parse(localStorage.getItem('selectedProduct'));
+        if (prod) {
+            const img = document.querySelector('.product-img-zoom');
+            if (img) {
+                img.src = prod.img;
+                img.alt = prod.name;
+            }
+
+            const title = document.querySelector('.product-title');
+            if (title) title.textContent = prod.name;
+
+            const price = document.querySelector('.product-price-two');
+            if (price) price.textContent = prod.price;
+
+            const rating = document.querySelector('.product-rating');
+            if (rating) {
+                rating.childNodes[0].nodeValue = prod.rating + ' ';
+            }
+
+            const descElem = document.querySelector('.product-desc');
+            if (descElem) {
+                descElem.innerHTML = `
+                ${prod.desc}<br>
+                <strong>Ingredientes:</strong> ${prod.ingredientes}<br>
+                <strong>Certificaciones:</strong> ${prod.certificaciones}
+            `;
+            }
+        }
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const zoomBtn = document.querySelector('.zoom-btn');
+        const img = document.querySelector('.product-img-zoom');
+        if (zoomBtn && img) {
+            zoomBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                let modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = 0;
+                modal.style.left = 0;
+                modal.style.width = '100vw';
+                modal.style.height = '100vh';
+                modal.style.background = 'rgba(0,0,0,0.8)';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+                modal.style.zIndex = 9999;
+                modal.innerHTML = `<img src="${img.src}" alt="${img.alt}" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 0 20px #000;"><span style="position:absolute;top:30px;right:40px;font-size:2.5rem;color:#fff;cursor:pointer;" id="close-zoom">&times;</span>`;
+                document.body.appendChild(modal);
+                document.getElementById('close-zoom').onclick = () => modal.remove();
+                modal.onclick = (ev) => { if (ev.target === modal) modal.remove(); };
+            });
+        }
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const wishlistBtn = document.querySelector('.btn-wishlist');
+        const prod = JSON.parse(localStorage.getItem('selectedProduct'));
+        if (!wishlistBtn || !prod) return;
+
+        const wishKey = 'wishlist-' + prod.name;
+
+        if (localStorage.getItem(wishKey) === 'true') {
+            wishlistBtn.classList.add('selected');
+        } else {
+            wishlistBtn.classList.remove('selected');
+        }
+
+        wishlistBtn.addEventListener('click', function () {
+            const selected = wishlistBtn.classList.toggle('selected');
+            localStorage.setItem(wishKey, selected ? 'true' : 'false');
+        });
+    });
+</script>
+
+</html>

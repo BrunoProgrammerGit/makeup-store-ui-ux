@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>¡Pago Exitoso! | EcoBeauty</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="success-container">
+        <div class="success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="success-title">¡Pago procesado con éxito!</div>
+        <div class="success-msg">
+            Gracias por tu compra.<br>
+            Toda la información del pago y tu pedido ha sido enviada a tu correo electrónico.
+        </div>
+        <a href="index.html" class="btn-success">
+            <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+        </a>
+    </div>
+</body>
+<script>
+
+    (function () {
+
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            document.documentElement.style.fontSize = savedFontSize + '%';
+        }
+        if (localStorage.getItem('highContrast') === 'true') {
+            document.documentElement.classList.add('high-contrast');
+        }
+    })();
+</script>
+
+</html>
