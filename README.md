@@ -1,4 +1,4 @@
-# 💄 Makeup Store UI/UX Website
+# Makeup Store UI/UX Website
 
 ## 📖 Project Overview
 This project is a **makeup e-commerce website** developed as an **academic project**, with a strong focus on **UI and UX design**.  
